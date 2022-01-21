@@ -1,0 +1,93 @@
+<html>
+
+<head></head>
+
+<body style="display: flex; justify-content: center;">
+
+    <table cellspacing="0" cellpadding="0" border="0" style="width: 70%;">
+        <tbody>
+            <tr>
+                <td id="0" onclick="clicar(0)" style="
+                border-right-width: 2px; 
+                border-right-style: solid;
+                text-align: center;
+                width: 50%;
+                height: 50%;
+                font-size: 18pt;">
+
+                    Clique aqui
+
+
+
+                </td>
+                <td id="1" onclick="clicar(1)" style="
+                border-bottom-width: 2px; 
+                border-bottom-style: solid;
+                text-align: center;
+                width: 50%;
+                height: 50%;
+                font-size: 18pt;"></td>
+            </tr>
+            <tr>
+                <td id="2" onclick="clicar(2)" style="
+                border-top-width: 2px; 
+                border-top-style: solid;
+                text-align: center;
+                width: 50%;
+                height: 50%;
+                font-size: 18pt;"></td>
+                <td id="3" onclick="clicar(3)" style="
+                border-left-width: 2px; 
+                border-left-style: solid;
+                text-align: center;
+                width: 50%;
+                height: 50%;
+                font-size: 18pt;"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script language="javascript">
+        var numero = 0
+
+        function clicar(celula) {
+            if (numero == celula) {
+                while(numero == celula) {
+                    randomico()
+                }            
+
+                document.getElementById(String(numero)).innerText = "Clique aqui"
+                document.getElementById(String(celula)).innerText = ""
+
+            } else {
+                exibirMensagemDivertida()
+            }
+        }
+
+        function exibirMensagemDivertida(){
+            var frases = [
+                'Bah!',
+                'Vixe!',
+                'Eita!',
+                'Mano do céu!',
+                'Sô!',
+                'Lascou!'
+            ]
+
+            var numeroRandom = Math.floor(Math.random() * frases.length)
+
+            alert(frases[numeroRandom])
+        }
+
+        function randomico(){
+            numero = Math.floor(Math.random() * 4)
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
